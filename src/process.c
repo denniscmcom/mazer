@@ -3,12 +3,13 @@
 //
 
 #include "process.h"
+#include <string.h>
 
 struct PngInfo read_png(char* filename) {
     struct PngInfo png_info;
     png_info.filename = filename;
 
-    asprintf(&filename, "mazes/%s", filename);
+    asprintf(&filename, "%s", filename);
     FILE* fp = fopen(filename, "rb");
 
     if (!fp) {
@@ -72,8 +73,12 @@ struct PngInfo read_png(char* filename) {
 }
 
 void write_png(struct PngInfo png_info) {
-    char* solved_filename = png_info.filename;
-    asprintf(&solved_filename, "sols/%s", solved_filename);
+    const char* base = strrchr(png_info.filename, '/');
+    base = base ? base + 1 : png_info.filename;
+
+    char* solved_filename;
+    asprintf(&solved_filename, "solved_%s", base);
+
     FILE* fp = fopen(solved_filename, "wb");
 
     if (!fp) {
