@@ -5,11 +5,11 @@ outputs the solution using the Wall Follower algorithm.
 
 ## Input
 
-![Maze](https://public.denniscm.com/repositories/mazer/maze.png)
+<img src="https://public.denniscm.com/repositories/mazer/maze.png" width="400">
 
 ## Output
 
-![Solved maze](https://public.denniscm.com/repositories/mazer/maze-solved.png)
+<img src="https://public.denniscm.com/repositories/mazer/maze_solved.png" width="400">
 
 ## Features
 
