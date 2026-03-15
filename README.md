@@ -9,7 +9,7 @@ outputs the solution using the Wall Follower algorithm.
 
 ## Output
 
-<img src="https://public.denniscm.com/repositories/mazer/maze_solved.png" width="400">
+<img src="https://public.denniscm.com/repositories/mazer/maze-solved.png" width="400">
 
 ## Features
 
